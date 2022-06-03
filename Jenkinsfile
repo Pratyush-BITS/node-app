@@ -19,8 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'chmod +x script/deploy'
-                sh '/var/lib/jenkins/workspace/Node-pipeline/script/deploy'
+                sh 'npm start'
             }
         }
     }
