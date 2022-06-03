@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "${WORKSPACE}"
-                ssh -t -t '/bin/bash ${WORKSPACE}/script/deploy'
+                ssh -t -t /bin/bash ${WORKSPACE}/script/deploy
             }
         }
     }
