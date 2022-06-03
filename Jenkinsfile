@@ -17,10 +17,10 @@ pipeline {
                 echo "Test"
             }
         }
-        stage('Deploy') {
+        stage('Deliver') {
             steps {
-                echo "${WORKSPACE}"
-                ssh -t -t /bin/bash ${WORKSPACE}/script/deploy
+                echo "${workspace}"
+                sh '/bin/bash /var/lib/jenkins/workspace/Node-pipeline/script/deploy'
             }
         }
     }
