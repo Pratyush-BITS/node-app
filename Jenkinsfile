@@ -19,8 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                chmod +x script/deploy
-                sh './script/deploy'
+                sh '/bin/bash ${workspace}/script/deploy ./script/deploy'
             }
         }
     }
