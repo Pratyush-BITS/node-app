@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'npm start'
+                echo 'chmod +x script/deploy'
             }
         }
     }
