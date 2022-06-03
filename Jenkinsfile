@@ -19,7 +19,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo 'chmod +x script/deploy'
+                chmod +x script/deploy
+                sh './script/deploy'
             }
         }
     }
