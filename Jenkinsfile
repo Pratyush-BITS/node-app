@@ -19,8 +19,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo "${workspace}"
-                sh '/bin/bash /var/lib/jenkins/workspace/Node-pipeline/script/deploy'
+                chmod +x script/deploy
+                sh '/var/lib/jenkins/workspace/Node-pipeline/script/deploy'
             }
         }
     }
