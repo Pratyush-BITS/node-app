@@ -17,9 +17,10 @@ pipeline {
                 echo "Test"
             }
         }
-        stage('Deliver') {
+        stage('Deploy') {
             steps {
-                sh '/bin/bash ${workspace}/script/deploy ./script/deploy'
+                echo "${WORKSPACE}"
+                sh '/bin/bash ${WORKSPACE}/script/deploy'
             }
         }
     }
